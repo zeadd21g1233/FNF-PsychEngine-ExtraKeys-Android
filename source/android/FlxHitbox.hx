@@ -25,7 +25,7 @@ class FlxHitbox extends FlxSpriteGroup {
     public var k10:FlxButton;    
     public var k11:FlxButton;
 
-    public var orgType:HitboxType = NORMAL;
+    public var orgType:HitboxType = FOUR;
     public var orgAlpha:Float = 0.75;
     public var orgAntialiasing:Bool = true;
     
