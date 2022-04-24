@@ -41,6 +41,10 @@ import DialogueBoxPsych;
 import Discord;
 #end
 
+#if android
+import android.Hardware;
+#end
+
 using StringTools;
 
 class FunkinLua {
@@ -1439,6 +1443,11 @@ class FunkinLua {
 			#end
 		});
 
+		Lua_helper.add_callback(lua, "vibration", function(milliseconds:Int) {
+			#if android
+			Hardware.vibrate(milliseconds);
+			#end
+		});
 
 		// LUA TEXTS
 		Lua_helper.add_callback(lua, "makeLuaText", function(tag:String, text:String, width:Int, x:Float, y:Float) {
